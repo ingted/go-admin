@@ -229,6 +229,9 @@ func GetValueFromSQLOfDatabaseType(typ DatabaseType, value interface{}) Value {
 		if v, ok := value.(string); ok {
 			return Value(v)
 		}
+		if v2, ok2 := value.([]byte); ok2 {
+			return Value(string(v2))
+		}
 		fmt.Println("emptyString")
 		return ""
 	case Contains(typ, BoolTypeList):
