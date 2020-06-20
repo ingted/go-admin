@@ -225,9 +225,11 @@ func GetValueFromDatabaseType(typ DatabaseType, value interface{}, json bool) Va
 func GetValueFromSQLOfDatabaseType(typ DatabaseType, value interface{}) Value {
 	switch {
 	case Contains(typ, StringTypeList):
+		fmt.Printf("%v\n", value)
 		if v, ok := value.(string); ok {
 			return Value(v)
 		}
+		fmt.Println("emptyString")
 		return ""
 	case Contains(typ, BoolTypeList):
 		if v, ok := value.(bool); ok {
