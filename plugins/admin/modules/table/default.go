@@ -107,7 +107,7 @@ func (tb *DefaultTable) GetData(params parameter.Parameters) (PanelInfo, error) 
 			return tb.GetDataWithIds(params.WithPKs(ids...))
 		}
 	}
-
+	fmt.Println("<<<.............................................>>>")
 	if tb.getDataFun != nil {
 		data, size = tb.getDataFun(params)
 	} else if tb.sourceURL != "" {
