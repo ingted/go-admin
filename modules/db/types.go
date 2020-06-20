@@ -114,6 +114,20 @@ const (
 
 	Timestamptz DatabaseType = "TIMESTAMPTZ"
 	Timetz      DatabaseType = "TIMETZ"
+
+	
+	Gender            DatabaseType = "VARCHAR"
+	Lifestyle DatabaseType = "VARCHAR"
+	Smoke DatabaseType = "VARCHAR"
+	Drink DatabaseType = "VARCHAR"
+	Geography DatabaseType = "VARCHAR"
+	Annual_income DatabaseType = "VARCHAR"
+	Net_worth DatabaseType = "VARCHAR"
+	Membership DatabaseType = "VARCHAR"
+		Uuid 	  DatabaseType = "UUID"
+		Orz		DatabaseType = "Orz"
+	
+	
 )
 
 // DT turn the string value into DatabaseType.
@@ -143,7 +157,8 @@ var (
 		Line, Lseg, Box, Path, Polygon, Circle, Cidr, Inet, Macaddr, Character, Varyingcharacter,
 		Nchar, Nativecharacter, Nvarchar, Clob, Binary, Varbinary, Enum, Set, Geometry, Multilinestring,
 		Multipolygon, Linestring, Multipoint, Geometrycollection, Name, UUID, Timestamptz,
-		Name, UUID, Inet}
+		Orz,
+	}
 
 	// BoolTypeList is a DatabaseType list of bool.
 	BoolTypeList = []DatabaseType{Bool, Boolean}
