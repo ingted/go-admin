@@ -216,6 +216,7 @@ func GetValueFromDatabaseType(typ DatabaseType, value interface{}, json bool) Va
 	if json {
 		return GetValueFromJSONOfDatabaseType(typ, value)
 	} else {
+		fmt.Println("<------------- GetValueFromDatabaseType ------------->")
 		return GetValueFromSQLOfDatabaseType(typ, value)
 	}
 }
